@@ -29,7 +29,7 @@ export const FullPost = () => {
         {loading ? <Post isLoading isFullPost /> : <Post
             id={state._id}
             title={state.title}
-            imageUrl={state.imageUrl && `http://localhost:4444${state.imageUrl}`}
+            imageUrl={state.imageUrl && `${process.env.REACT_APP_API}${state.imageUrl}`}
             user={state.user}
             createdAt={state.createdAt}
             viewsCount={state.viewsCount}
